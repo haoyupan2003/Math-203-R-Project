@@ -1,3 +1,0 @@
-"0",""
-"0",""
-"0","ggplot(Women, aes(x = Weight, color = Education, fill = Education)) + geom_density(alpha = 0.3) + labs(title = ""Weight and Education Relationships of Women"", x = ""Weight"", y = ""Density"") + theme_classic()"

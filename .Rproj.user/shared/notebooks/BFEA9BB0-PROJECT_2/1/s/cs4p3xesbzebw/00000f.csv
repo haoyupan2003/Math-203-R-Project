@@ -1,5 +1,0 @@
-"0","# Example 5:"
-"0","# To filter a dataset we can go like this:"
-"0",""
-"0","Women  = filter(NHANES, Gender == ""female"", Age >= 18)"
-"0",""

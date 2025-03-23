@@ -1,8 +1,0 @@
-"0",""
-"0","# Now we will look at only White adult women. For this we first filter the NHANES set, and then we create a histogram."
-"0",""
-"0","Women = filter(NHANES, Race1 == ""White"", Age >= 18, Gender == ""female"")"
-"0","View(NHANES)"
-"0",""
-"0","ggplot(Women,aes(x=Weight))+"
-"0","  geom_histogram()"

@@ -1,3 +1,0 @@
-"0",""
-"0","ggplot(NHANES, aes(x=Gender, fill=Education)) +"
-"0","         geom_bar()"

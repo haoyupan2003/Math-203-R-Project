@@ -1,5 +1,0 @@
-"0","# Example 1: "
-"0","# This creates a histogram of the Height of the participants and colours it according to gender."
-"0",""
-"0","ggplot(NHANES, aes(x=Height, colour = Gender)) + "
-"0","  geom_histogram()"

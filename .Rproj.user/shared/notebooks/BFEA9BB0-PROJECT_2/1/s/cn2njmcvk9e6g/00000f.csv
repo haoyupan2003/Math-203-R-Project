@@ -1,5 +1,0 @@
-"0","# Example 2: "
-"0","# This creates a ""density function"" that mimics the shape of the previous histogram."
-"0",""
-"0","ggplot(NHANES, aes(x=Height, colour=Gender, fill=Gender)) + "
-"0","  geom_density(alpha=0.1) "

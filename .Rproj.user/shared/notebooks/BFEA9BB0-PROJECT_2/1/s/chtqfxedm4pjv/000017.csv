@@ -1,3 +1,0 @@
-"0",""
-"0","ggplot(NHANES, aes(x=Education, fill=Gender)) +"
-"0","         geom_bar(position=""dodge"")"

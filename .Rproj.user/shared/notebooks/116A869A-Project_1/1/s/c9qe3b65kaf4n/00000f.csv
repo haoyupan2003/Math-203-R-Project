@@ -1,6 +1,0 @@
-"0",""
-"0","Men = filter(NHANES, Race1 == ""White"", Age >= 18, Gender == ""male"")"
-"0",""
-"0","ggplot(Men,aes(x=Height))+"
-"0","  geom_histogram()"
-"0",""

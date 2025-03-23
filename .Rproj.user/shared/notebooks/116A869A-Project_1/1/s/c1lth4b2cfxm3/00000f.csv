@@ -1,7 +1,0 @@
-"0",""
-"0","# EXAMPLE"
-"0",""
-"0","# Let's explore the NHANES set using ggplot. "
-"0",""
-"0","ggplot(NHANES,aes(x=Weight, fill=Race1))+"
-"0","  geom_histogram()"
