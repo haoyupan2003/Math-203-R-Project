@@ -1,0 +1,173 @@
+---
+title: "Project 1"
+author: "Batman"
+date: "35/35/2035"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+In this project we will explore some basic constructions and calculations. Use the examples to complete the exercises.
+
+```{r}
+#EXAMPLE
+#You can embed an R code chunk like this:
+
+2+4/3
+(2+4)/3
+
+# Anything after a # in a chunk is regarded as a comment.
+# You can execute a chunk by clicking on the green triangle at the upper right-hand corner of this chunk. 
+
+```
+
+```{r}
+
+#EXAMPLE
+# We can create basic data sets like this:
+
+x = sample(1:50,size = 20, replace = TRUE)
+x
+
+```
+
+------------------------------------------------------------------------
+
+## Exercise 1
+
+Create a chunk to take a sample of size 30 of integers less than or equal to 100 allowing repetitions. Call this set 'w'.
+
+```{r}
+
+w = sample(1:100,size = 30, replace = TRUE)
+w
+
+
+```
+
+------------------------------------------------------------------------
+
+```{r}
+#EXAMPLE
+# We can compute basic statistics and visualize data sets.
+
+mean(x)
+median(x)
+fivenum(x)
+sd(x)
+
+stem(x)
+hist(x,breaks = 3)
+boxplot(x)
+boxplot(x, data = data, horizontal = TRUE)
+
+```
+
+------------------------------------------------------------------------
+
+## Exercise 2
+
+Create a chunk to compute the basic stats of 'w' and display a stem plot, a boxplot, and a histogram with 5 classes for the set 'w'.
+
+```{r}
+mean(w)
+median(w)
+fivenum(w)
+sd(w)
+
+stem(w)
+hist(w,breaks = 3)
+boxplot(w)
+
+```
+
+------------------------------------------------------------------------
+
+We will use the data from the 2010 NHANES set (National Health and Nutrition Examination Survey), as well as the packages ggplot and dplyr.
+
+```{r echo = FALSE, eval = FALSE, warning = FALSE, include = FALSE}
+
+#First the installation. Just run this chunk.
+
+install.packages("NHANES")
+install.packages("ggplot2")
+install.packages("dplyr")
+
+```
+
+```{r}
+
+# Now we load them. [In the future, once a package is installed we will only have to load it.] Just run this chunk. 
+
+# If you have a Mac, Rstudio may prompt you to install an additional library. You can also find it here https://www.xquartz.org/   This library is needed for the "View" command. 
+
+
+library(NHANES)
+View(NHANES)
+
+# Mac Users: put a # in front of the View command to avoid installing other libraries.
+
+library(ggplot2)
+library(dplyr)
+
+
+```
+
+```{r}
+
+#EXAMPLE
+
+# We can access particular columns of the NHANES set by using the dollar symbol.
+
+# What is the average height?
+mean(NHANES$Height)
+
+#Let's try again
+mean(NHANES$Height,na.rm = TRUE)
+
+
+
+```
+
+```{r echo = FALSE, eval = FALSE, warning = FALSE}
+
+# EXAMPLE
+
+# Let's explore the NHANES set using ggplot. 
+
+ggplot(NHANES,aes(x=Weight, fill=Race1))+
+  geom_histogram()
+
+# Now we will look at only White adult women. For this we first filter the NHANES set, and then we create a histogram.
+
+Women = filter(NHANES, Race1 == "White", Age >= 18, Gender == "female")
+View(NHANES)
+
+ggplot(Women,aes(x=Weight))+
+  geom_histogram()
+
+
+```
+
+------------------------------------------------------------------------
+
+## Exercise 3
+
+Create a chunk to (1) Use the function "filter" to create a data set consisting of White adult males. Call this set "Men" (2) Create a histogram displaying their height.
+
+```{r}
+
+Men = filter(NHANES, Race1 == "White", Age >= 18, Gender == "male")
+
+ggplot(Men,aes(x=Height))+
+  geom_histogram()
+
+```
+
+------------------------------------------------------------------------
+
+## Knitting
+
+When you click the **Knit** button at the top select the "Word" option. Rstudio will take a few seconds to generate the Word file. If you have a Mac you may see message-box saying that you need to grant permission in order to see the file.
+
+Note that you must convert your Word file into a PDF file and the submit this latter.

@@ -1,0 +1,4 @@
+"0",""
+"0","ggplot(NHANES, aes(x=Education, fill=Gender)) +"
+"0","         geom_bar(position=""fill"") +"
+"0","          guides(x = guide_axis(n.dodge = 2))"

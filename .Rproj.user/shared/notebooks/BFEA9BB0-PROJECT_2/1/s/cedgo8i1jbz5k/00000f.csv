@@ -1,0 +1,6 @@
+"0","# Example 3: "
+"0","# This creates a plot showing the relation between Height and Age, and colours it according to Gender. The points correspond to individuals."
+"0",""
+"0",""
+"0","ggplot(NHANES, aes(x=Age, y=Height, colour = Gender)) + "
+"0","  geom_point()"

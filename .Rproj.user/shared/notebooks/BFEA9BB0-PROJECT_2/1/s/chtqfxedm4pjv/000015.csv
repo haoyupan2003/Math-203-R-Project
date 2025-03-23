@@ -1,0 +1,4 @@
+"0",""
+"0","ggplot(NHANES, aes(x=HomeOwn, fill=Gender)) +"
+"0","         geom_bar(position=""fill"") +"
+"0","          guides(x = guide_axis(angle = 30))"

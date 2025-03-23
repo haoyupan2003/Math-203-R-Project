@@ -1,0 +1,5 @@
+"0","# Example 7:"
+"0","# Barplots are useful to explote 'dependence' "
+"0",""
+"0","ggplot(NHANES, aes(x=Education, fill=Gender)) +"
+"0","         geom_bar()"
